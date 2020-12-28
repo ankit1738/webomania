@@ -1,0 +1,31 @@
+<% include partials/header %>
+
+
+<link rel="stylesheet" type="text/css" href="./stylesheet/main.css">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Project Webomania</h1>
+    <p class="lead">Sample Project for techathon. Question 1</p>
+  </div>
+</div>
+
+<div class="container resource">
+	<div class="row">
+	<% allResources.forEach(function(resource){ %>
+	  <div class="col-sm-4">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title"><%= resource.name %></h5>
+	        <p class="card-text"><%= resource.quantity %></p>
+	        <a href="#" class="btn btn-primary">Request Resource</a>
+	      </div>
+	    </div>
+	  </div>
+	  <% }) %>
+</div>
+</div>
+
+ 
+ 
+
+<% include partials/footer %>

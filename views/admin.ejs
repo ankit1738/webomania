@@ -1,0 +1,50 @@
+<% include ./partials/header.ejs %>
+
+<% if(currentUser && currentUser.isAdmin){ %>
+<div class="container paddingTopBottom">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card mb-3 text-center">
+			  <div class="card-header" style="background-color: #6A8A82; color: white; font-size: 2rem;"><i class="fas fa-lock"></i> Dashbord</div>
+			  <div class="card-body text-primary">
+			    <div class="row">
+			    	<div class="col-lg-4">
+
+			    		<div onclick="location.href='dashboard/resetPassword/<%= currentUser._id %>'" class="card text-white mb-3" style="max-width: 18rem; background-color:#6A8A82; cursor: pointer;">
+						  <div class="card-header">Password reset</div>
+						  <div class="card-body" style="text-align: center;">
+						    <i class="fas fa-key dash_icon" style="font-size: 8rem;" aria-hidden="true"></i>
+						  </div>
+						</div>
+			    		
+			    	</div>
+
+			    	<div class="col-lg-4">
+			    		
+			    		<div onclick="location.href='resources/add'" class="card text-white mb-3" style="max-width: 18rem; background-color:#6A8A82; cursor: pointer;">
+						  <div class="card-header">Add Resources</div>
+						  <div class="card-body" style="text-align: center;">
+						    <i class="fas fa-tasks dash_icon" style="font-size: 8rem;"></i>
+						  </div>
+						</div>
+
+			    	</div>
+
+			    	<div class="col-lg-4">
+			    		
+			    		<div onclick="location.href='dashbord/orders'" class="card text-white mb-3" style="max-width: 18rem; background-color:#6A8A82; cursor: pointer;">
+						  <div class="card-header">ALL ORDERS</div>
+						  <div class="card-body" style="text-align: center;">
+						    <i class="fab fa-first-order dash_icon" style="font-size: 8rem;"></i>
+						  </div>
+						</div>
+
+			    	</div>
+
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<% } %>
